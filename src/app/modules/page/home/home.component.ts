@@ -18,16 +18,16 @@ export class HomeComponent {
     name:['',Validators.required],
     email:['',Validators.required],
     password:['',Validators.required]
-  })
+  });
 
   constructor(private formBuilder: FormBuilder){}
 
   onSubmitLoginForm():void{
-    console.log("Dados de login" + this.loginForm.value)
+    console.log("Dados de login", this.loginForm.value);
   }
 
   onSubmitSingupForm():void{
-    console.log("Criação de conta" + this.singupForm.value)
+    console.log("Criação de conta", this.singupForm.value);
     this.loginCard = true;
   }
 }
