@@ -18,14 +18,13 @@ export class UserService {
   criarUsuario(
     requestDatas: CriarUsuarioRequest
   ): Observable<CriarUsuarioResponse> {
-    return this.http.post<CriarUsuarioResponse>( `${this.API_URL}/user`,
+    return this.http.post<CriarUsuarioResponse>(
+      `${this.API_URL}/user`,
       requestDatas
     );
   }
 
-  authUser(requestDatas: AuthRequest): Observable<AuthResponse>{
-    return this.http.post<AuthResponse>(
-      `${this.API_URL}/auth`, requestDatas
-    )
+  authUser(requestDatas: AuthRequest): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(`${this.API_URL}/auth`, requestDatas);
   }
 }
